@@ -192,6 +192,7 @@ header p {
 /* Bounce 애니메이션 */
 @keyframes fadeBounce {
     0% {
+        /* 안보임 */
         opacity: 0;
         transform: translateY(-200%);
     }
@@ -214,6 +215,7 @@ header p {
     }
 
     100% {
+        /* 투명도 없음 */
         opacity: 1;
         transform: translateY(0);
     }
@@ -222,10 +224,11 @@ header p {
 .box-a {
     flex-basis: 100%;
     opacity: 0;
-    /* animation: fadeBounce 1s forwards; */
-    animation-name: fadeBounce;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
+    animation: fadeBounce 1s forwards;
+    /* animation-name: fadeBounce;
+    animation-duration: 1s; */
+    /* forwards는 끝난 시점 그대로 CSS유지, backwards는 다시 시작시점 */
+    /* animation-fill-mode: forwards; */
     background-color: #e7eff5;
     padding: 20px 20px 0 20px;
     border: 2px solid #d3dee7;
